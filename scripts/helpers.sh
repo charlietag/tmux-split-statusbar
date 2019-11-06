@@ -2,7 +2,7 @@ split_bind_key() {
   local bind_key="$(tmux show-option -gqv "@split-statusbar-bindkey")"
   [[ -z "${bind_key}" ]] && bind_key="M-s"
 
-  tmux unbind-key "${bind_key}"
+  tmux list-keys |grep tmux-split-statusbar | awk '{print $2" "$3" "$4}' | xargs -i bash -c "tmux unbind-key {}"
   tmux bind-key ${bind_key} run-shell '~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux toggle'
 }
 
