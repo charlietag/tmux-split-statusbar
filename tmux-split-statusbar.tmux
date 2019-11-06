@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash -x
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/helpers.sh"
 
@@ -7,16 +7,17 @@ main() {
   set_default_status_format
 
   local split_statusbar_mode="$(tmux show-option -gqv "@split-statusbar-mode")"
-  if [[ "${split_statusbar_mode}" = "on" ]];then
-    split_statusbar_on
-  fi
-  if [[ "${split_statusbar_mode}" = "off" ]];then
-    split_statusbar_off
-  fi
-
   local toggle_flag="$1"
+
   if [[ "${toggle_flag}" = "toggle" ]];then
     split_statusbar_toggle
+  else
+    if [[ "${split_statusbar_mode}" = "on" ]];then
+      split_statusbar_on
+    fi
+    if [[ "${split_statusbar_mode}" = "off" ]];then
+      split_statusbar_off
+    fi
   fi
 
 }
