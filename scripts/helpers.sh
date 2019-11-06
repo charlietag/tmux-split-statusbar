@@ -3,7 +3,7 @@ split_bind_key() {
   [[ -z "${bind_key}" ]] && bind_key="M-s"
 
   tmux unbind-key "${bind_key}"
-  tmux bind-key "${bind_key}" run-shell '~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux toggle'
+  tmux bind-key ${bind_key} run-shell '~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux toggle'
 }
 
 
