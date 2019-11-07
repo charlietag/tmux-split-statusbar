@@ -1,6 +1,6 @@
 # Tmux split status bar plugin
 
-This is an plugin that split stats bar into 2 parts
+This is an plugin that split stats bar into 2 parts (lines)
 
   `window part` - First line
 
@@ -75,3 +75,7 @@ after you do this.
   set -g @split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ] , this is for toggle statusbar-mode, define yourself just like bind-key
 
   ```
+
+### License
+
+[MIT license](https://opensource.org/licenses/MIT).
