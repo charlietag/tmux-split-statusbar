@@ -1,4 +1,4 @@
-# Tmux split status bar plugin
+# Tmux Plugin -split status bar
 
 This is an plugin that split stats bar into 2 parts (lines)
 
@@ -41,10 +41,10 @@ Status bar should be splited now
 
 ## Examples
 
-Status bar splited (on):<br/>
+Status bar splited (on): double lines<br/>
 ![split-statusbar-mode-on](/screenshots/split-statusbar-mode-on.png)
 
-Status bar splited (off):<br/>
+Status bar splited (off): single line<br/>
 ![split-statusbar-mode-off](/screenshots/split-statusbar-mode-off.png)
 
 
