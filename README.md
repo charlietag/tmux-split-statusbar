@@ -8,6 +8,8 @@ This is an plugin that split stats bar into 2 parts (lines)
 
 This plugin is compatible with Tmux plugin manager([TPM](https://github.com/tmux-plugins/tpm))
 
+This pllugin should work with any themes well.
+
 ## Installation
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
