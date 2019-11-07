@@ -55,7 +55,7 @@ Here are all available options with their default values:
 
 ```shell
 @split-statusbar-mode 'on' # [ on | off]
-@split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ]
+@split-statusbar-bindkey '-n F11' # [ M-s | -n F11 | ... ]
                                   # bindkey for toggle statusbar-mode
                                   # define yourself just like bind-key, default: M-s
 ```
@@ -72,8 +72,9 @@ Sample config in ~/.tmux.conf
 ```bash
 set -g @plugin 'charlietag/tmux-split-statusbar'
 set -g @split-statusbar-mode 'on' # [ on | off]
-set -g @split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ] , this is for toggle statusbar-mode, define yourself just like bind-key
-
+set -g @split-statusbar-bindkey '-n F11'  # [ M-s | -n F11 | ... ]
+                                          # bindkey for toggle statusbar-mode
+                                          # define yourself just like bind-key, default: M-s
 ```
 
 # License
