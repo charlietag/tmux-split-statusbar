@@ -1,9 +1,12 @@
 # Tmux split status bar plugin
 
-* This is an plugin that split stats bar into 2 parts
-  * window part - First line
-  * status-left / status-right part - Second line
-* This plugin is compatible with Tmux plugin manager([TPM](https://github.com/tmux-plugins/tpm))
+This is an plugin that split stats bar into 2 parts
+
+  `window part` - First line
+
+  `status-left / status-right` part - Second line
+
+This plugin is compatible with Tmux plugin manager([TPM](https://github.com/tmux-plugins/tpm))
 
 ## Installation
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
@@ -52,7 +55,9 @@ Here are all available options with their default values:
 
 ```shell
 @split-statusbar-mode 'on' # [ on | off]
-@split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ] , this is for toggle statusbar-mode, define yourself just like bind-key, default: M-s
+@split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ]
+                                  # bindkey for toggle statusbar-mode
+                                  # define yourself just like bind-key, default: M-s
 ```
 
 Don't forget to reload tmux environment (`$ tmux source-file ~/.tmux.conf`)
@@ -65,8 +70,8 @@ after you do this.
 * Sample config in ~/.tmux.conf
 
   ```bash
-set -g @plugin 'charlietag/tmux-split-statusbar'
-set -g @split-statusbar-mode 'on' # [ on | off]
-set -g @split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ] , this is for toggle statusbar-mode, define yourself just like bind-key
+  set -g @plugin 'charlietag/tmux-split-statusbar'
+  set -g @split-statusbar-mode 'on' # [ on | off]
+  set -g @split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ] , this is for toggle statusbar-mode, define yourself just like bind-key
 
   ```
