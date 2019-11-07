@@ -55,7 +55,7 @@ Status bar splited (off): single line<br/>
 
 Here are all available options with their default values:
 
-```shell
+```bash
 @split-statusbar-mode 'on' # [ on | off]
 @split-statusbar-bindkey '-n F11' # [ M-s | -n F11 | ... ]
                                   # bindkey for toggle statusbar-mode
