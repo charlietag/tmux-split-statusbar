@@ -67,15 +67,15 @@ after you do this.
 # Usage
 
 
-* Sample config in ~/.tmux.conf
+Sample config in ~/.tmux.conf
 
-  ```bash
-  set -g @plugin 'charlietag/tmux-split-statusbar'
-  set -g @split-statusbar-mode 'on' # [ on | off]
-  set -g @split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ] , this is for toggle statusbar-mode, define yourself just like bind-key
+```bash
+set -g @plugin 'charlietag/tmux-split-statusbar'
+set -g @split-statusbar-mode 'on' # [ on | off]
+set -g @split-statusbar-bindkey '-n F11' # [ M-s | -n F11 ] , this is for toggle statusbar-mode, define yourself just like bind-key
 
-  ```
+```
 
-### License
+# License
 
-[MIT license](https://opensource.org/licenses/MIT).
+[MIT license](https://opensource.org/licenses/MIT)
