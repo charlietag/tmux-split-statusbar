@@ -13,7 +13,7 @@ This pllugin should work with any themes well.
 ## Installation
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
-Requirements: `tmux` version 2.9 (or higher), `bash`.
+Requirements: `tmux` version 3.0 (or higher), `bash`.
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
