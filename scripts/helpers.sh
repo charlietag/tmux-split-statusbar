@@ -42,7 +42,7 @@ split_statusbar_toggle() {
 # status-format[7] - status_format_1_default
 set_default_status_format() {
   local status_format_0_default="$(tmux show-option -gqv "status-format[6]")"
-  local status_format_1_default="$(tmux show-option -gqv "status-format[7]")"
+  #local status_format_1_default="$(tmux show-option -gqv "status-format[7]")"
 
   if [[ -z "${status_format_0_default}" ]]; then
     status_format_0_default="$(tmux show-option -gqv "status-format[0]")"

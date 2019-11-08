@@ -10,8 +10,8 @@ This plugin is compatible with Tmux plugin manager([TPM](https://github.com/tmux
 
 This pllugin should work with any themes well.
 
-## Installation
-### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
+# Installation
+## Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Requirements: `tmux` version 3.0 (or higher), `bash`.
 
@@ -23,7 +23,7 @@ Hit `prefix + I` to fetch the plugin and source it.
 
 Status bar should be splited now
 
-### Manual Installation
+## Manual Installation
 
 Clone the repo:
 
@@ -41,7 +41,7 @@ Reload TMUX environment:
 Status bar should be splited now
 
 
-## Examples
+# Examples
 
 Status bar splited (on): double lines<br/>
 ![split-statusbar-mode-on](/screenshots/split-statusbar-mode-on.png)
@@ -51,7 +51,7 @@ Status bar splited (off): single line<br/>
 
 
 
-## Customization
+# Customization
 
 Here are all available options with their default values:
 
