@@ -68,7 +68,6 @@ after you do this.
 
 # Usage
 
-
 Sample config in ~/.tmux.conf
 
 ```bash
@@ -78,6 +77,10 @@ set -g @split-statusbar-bindkey '-n F11'  # [ M-s | -n F11 | ... ]
                                           # bindkey for toggle statusbar-mode
                                           # define yourself just like bind-key, default: M-s
 ```
+
+# Other goodies
+
+- [tmux-themes](https://github.com/charlietag/tmux-themes) - simple colorful theme made by CharlieTag
 
 # License
 
