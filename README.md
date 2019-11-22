@@ -18,7 +18,7 @@ This pllugin should work with any themes well.
 
 Due to using the command set -g**a** status-left / status-right 
 
-`And it would be better put tmux-cpu-model config lines **AFTER** `status style like` setup !`
+`And it would be better put "tmux-split-statusbar" config lines **AFTER** `status style like` setup !`
 
 
 ### Requirements:
