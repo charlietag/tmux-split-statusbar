@@ -71,7 +71,7 @@ split_statusbar_toggle() {
 
 # --------------------- hide status left right ---------------------
 hide_status_on() {
-  tmux set -g status-left ""
+  tmux set -g status-left "#[fg=colour232,bg=red,bold]#{?client_prefix, <PREFIX> ,}#[fg=colour232,bg=colour203,bold]#{?pane_in_mode, <COPY> ,}"
   tmux set -g status-right ""
 }
 
