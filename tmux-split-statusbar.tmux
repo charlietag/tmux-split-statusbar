@@ -9,8 +9,13 @@ main() {
   local split_statusbar_mode="$(tmux show-option -gqv "@split-statusbar-mode")"
   local toggle_flag="$1"
 
-  if [[ "${toggle_flag}" = "toggle" ]];then
-    split_statusbar_toggle
+  if [[ -n "${toggle_flag}" ]];then
+    if [[ "${toggle_flag}" = "toggle" ]];then
+      split_statusbar_toggle
+    fi
+    if [[ "${toggle_flag}" = "hide" ]];then
+      hide_status_toggle
+    fi
   else
     if [[ "${split_statusbar_mode}" = "on" ]];then
       split_statusbar_on
