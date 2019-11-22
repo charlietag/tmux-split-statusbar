@@ -6,14 +6,25 @@ This is an plugin that split stats bar into 2 parts (lines)
 
   `status-left / status-right` part - Second line
 
+This plugin provides function to hide status-left / status-right as well, if you want to focus, pure silence environment.
+
 This plugin is compatible with Tmux plugin manager([TPM](https://github.com/tmux-plugins/tpm))
 
 This pllugin should work with any themes well.
 
 # Installation
 ## Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
+### Notice:
 
-Requirements: `tmux` version 3.0 (or higher), `bash`.
+Due to using the command set -g**a** status-left / status-right 
+
+`And it would be better put tmux-cpu-model config lines **AFTER** `status style like` setup !`
+
+
+### Requirements:
+Requirements 1 : Make sure set these config lines **AFTER** `theme plugin`
+
+Requirements 2 : `tmux` version 3.0 (or higher), `bash`.
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
@@ -72,10 +83,15 @@ Sample config in ~/.tmux.conf
 
 ```bash
 set -g @plugin 'charlietag/tmux-split-statusbar'
-set -g @split-statusbar-mode 'on' # [ on | off]
-set -g @split-statusbar-bindkey '-n F11'  # [ M-s | -n F11 | ... ]
-                                          # bindkey for toggle statusbar-mode
-                                          # define yourself just like bind-key, default: M-s
+set -g @split-statusbar-mode 'on'                 # [ on | off]
+
+set -g @split-statusbar-bindkey '-n F11'          # [ M-s | -n F11 | ... ]
+                                                  # bindkey for toggle statusbar-mode
+                                                  # define yourself just like bind-key, default: M-s
+
+set -g @split-status-hide-bindkey '-n F12'        # [ M-d | -n F12 | ... ]
+                                                  # bindkey for status-left / status-right hiding
+                                                  # define yourself just like bind-key, default: M-d
 ```
 
 # Other goodies
