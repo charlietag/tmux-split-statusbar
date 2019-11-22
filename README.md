@@ -60,6 +60,11 @@ Status bar splited (on): double lines<br/>
 Status bar splited (off): single line<br/>
 ![split-statusbar-mode-off](/screenshots/split-statusbar-mode-off.png)
 
+Status bar hide (on)<br/>
+![split-statusbar-hide-on](/screenshots/split-statusbar-hide-on.png)
+
+Status bar hide (off)<br/>
+![split-statusbar-hide-off](/screenshots/split-statusbar-hide-off.png)
 
 
 # Customization
