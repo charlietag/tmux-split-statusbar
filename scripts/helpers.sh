@@ -10,8 +10,8 @@ split_bind_key() {
 
   # Define bind key for status left right toggle
   local bind_key_hide="$(tmux show-option -gqv "@split-status-hide-bindkey")"
-  [[ -z "${bind_key_hide}" ]] && bind_key="M-d"
-  tmux bind-key ${bind_key} run-shell '~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux hide'
+  [[ -z "${bind_key_hide}" ]] && bind_key_hide="M-d"
+  tmux bind-key ${bind_key_hide} run-shell '~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux hide'
 }
 
 # --------------------- Initialize ---------------------
