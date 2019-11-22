@@ -26,7 +26,7 @@ Requirements 1 : Make sure set these config lines **AFTER** `theme plugin`
 
   (keep this plugin at the very bottom of tmux.conf)
 
-  Better before this line
+  Better **JUST** before this line
 
   ```bash
   run -b '~/.tmux/plugins/tpm/tpm'
