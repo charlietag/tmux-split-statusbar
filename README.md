@@ -80,10 +80,15 @@ Status bar hide (off)<br/>
 Here are all available options with their default values:
 
 ```bash
-@split-statusbar-mode 'on' # [ on | off]
-@split-statusbar-bindkey '-n F11' # [ M-s | -n F11 | ... ]
-                                  # bindkey for toggle statusbar-mode
-                                  # define yourself just like bind-key, default: M-s
+@split-statusbar-mode 'on'                        # [ on | off]
+
+@split-statusbar-bindkey '-n F11'                 # [ M-s | -n F11 | ... ]
+                                                  # bindkey for toggle statusbar-mode
+                                                  # define yourself just like bind-key, default: M-s
+
+set -g @split-status-hide-bindkey '-n F12'        # [ M-d | -n F12 | ... ]
+                                                  # bindkey for status-left / status-right hiding
+                                                  # define yourself just like bind-key, default: M-d
 ```
 
 Don't forget to reload tmux environment (`$ tmux source-file ~/.tmux.conf`)
