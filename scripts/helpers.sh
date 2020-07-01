@@ -64,8 +64,10 @@ split_statusbar_toggle() {
   local status_format_0_default="$(tmux show-option -gqv "status-format[6]")"
   if [[ "${status_format_current}" = "${status_format_0_default}" ]]; then
     split_statusbar_on
+    tmux set -g @split-statusbar-mode-setto "on"
   else
     split_statusbar_off
+    tmux set -g @split-statusbar-mode-setto "off"
   fi
 }
 
@@ -73,6 +75,21 @@ split_statusbar_toggle() {
 hide_status_on() {
   tmux set -g status-left "#[fg=colour232,bg=red,bold]#{?client_prefix, <PREFIX> ,}#[fg=colour232,bg=colour203,bold]#{?pane_in_mode, <COPY> ,}"
   tmux set -g status-right ""
+
+  # For support tmux-coninuum
+  local check_plugin_status="$(cat ~/.tmux.conf |awk '/^[ \t]*set(-option)? +-g +@plugin/ { gsub(/'\''/,""); gsub(/'\"'/,""); print $4 }' | grep 'tmux-plugins/tmux-continuum')"
+
+  if [[ -n "${check_plugin_status}" ]]; then
+    #if [[ -f ~/.tmux/plugins/tmux-continuum/continuum.tmux ]]; then
+    #  ~/.tmux/plugins/tmux-continuum/continuum.tmux >/dev/null 2>/dev/null
+    #fi
+		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-continuum/scripts/continuum_save.sh)"
+    if [[ -f "${plugin_script}" ]]; then
+      tmux set -g status-right "#(${plugin_script})"
+    fi
+
+  fi
+
 }
 
 hide_status_off() {
@@ -87,8 +104,10 @@ hide_status_toggle() {
   local status_left_default="$(tmux show-option -gqv "@status-left-default")"
   if [[ "${status_left_current}" = "${status_left_default}" ]]; then
     hide_status_on
+    tmux set -g @hide-statusbar-mode-setto "on"
   else
     hide_status_off
+    tmux set -g @hide-statusbar-mode-setto "off"
   fi
 }
 

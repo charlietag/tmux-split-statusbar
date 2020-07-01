@@ -119,3 +119,14 @@ set -g @split-status-hide-bindkey '-n F12'        # [ M-d | -n F12 | ... ]
 # License
 
 [MIT license](https://opensource.org/licenses/MIT)
+
+# Note
+
+* 2020/07/01
+  * fully compatible with https://github.com/tmux-plugins/tmux-continuum (auto-save-session in hide status mode)
+  * add reload function to **reinitialize status bar** (for working with tmux themes like [charlietag/tmux-themes](https://github.com/charlietag/tmux-themes))
+    * Use the following command to **reset status bar to new themes**
+
+      ```bash
+      ~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux reload
+      ```
