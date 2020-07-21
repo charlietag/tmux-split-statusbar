@@ -16,7 +16,7 @@ This pllugin should work with any themes well.
 ## Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 ### Notice:
 
-Due to using the command set -g**a** status-left / status-right 
+Due to using the command set -g**a** status-left / status-right
 
 `And it would be better put "tmux-split-statusbar" config lines **AFTER** `status style like` setup !`
 
@@ -111,6 +111,10 @@ set -g @split-status-hide-bindkey '-n F12'        # [ M-d | -n F12 | ... ]
                                                   # bindkey for status-left / status-right hiding
                                                   # define yourself just like bind-key, default: M-d
 ```
+
+# Also read
+
+- [.tmux.conf](https://github.com/charlietag/tmux_settings/blob/master/tmux.conf) - Tmux configuration sample by CharlieTag
 
 # Other goodies
 
