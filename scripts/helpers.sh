@@ -43,7 +43,8 @@ set_default_status_format() {
 split_statusbar_on() {
   local status_format_0_default="$(tmux show-option -gqv "status-format[6]")"
 
-  status_format_0_tobe="$(echo "${status_format_0_default}" | sed 's/:status-left//g' | sed 's/:status-right//g')"
+  # status_format_0_tobe="$(echo "${status_format_0_default}" | sed 's/:status-left//g' | sed 's/:status-right//g')"
+  status_format_0_tobe="$(echo "${status_format_0_default}" | sed 's/#{T;=\/#{status-left-length}:status-left}//g' | sed 's/#{T;=\/#{status-right-length}:status-right}//g')"
   status_format_1_tobe="$(echo "${status_format_0_default}" | sed 's/:window-status-current-format//g' | sed 's/:window-status-format//g')"
   tmux set -g status-format[0] "${status_format_0_tobe}"
   tmux set -g status-format[1] "${status_format_1_tobe}"
@@ -83,7 +84,7 @@ hide_status_on() {
     #if [[ -f ~/.tmux/plugins/tmux-continuum/continuum.tmux ]]; then
     #  ~/.tmux/plugins/tmux-continuum/continuum.tmux >/dev/null 2>/dev/null
     #fi
-		local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-continuum/scripts/continuum_save.sh)"
+    local plugin_script="$(readlink -m ~/.tmux/plugins/tmux-continuum/scripts/continuum_save.sh)"
     if [[ -f "${plugin_script}" ]]; then
       tmux set -g status-right "#(${plugin_script})"
     fi
