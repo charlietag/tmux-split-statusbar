@@ -135,3 +135,7 @@ set -g @split-status-hide-bindkey '-n F12'        # [ M-d | -n F12 | ... ]
         ```bash
         ~/.tmux/plugins/tmux-split-statusbar/tmux-split-statusbar.tmux reload
         ```
+* 2021/07/14
+  * https://github.com/charlietag/tmux-split-statusbar/compare/v0.0.1...v0.0.2
+    * Fix issue Unwanted characters in window status #1
+      * https://github.com/charlietag/tmux-split-statusbar/issues/1
