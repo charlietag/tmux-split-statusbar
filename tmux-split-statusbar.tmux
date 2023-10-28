@@ -6,6 +6,7 @@ main() {
   local split_statusbar_mode="$(tmux show-option -gqv "@split-statusbar-mode")"
   local split_statusbar_mode_setto="$(tmux show-option -gqv "@split-statusbar-mode-setto")"
   local hide_statusbar_mode_setto="$(tmux show-option -gqv "@hide-statusbar-mode-setto")"
+  local split_statusbar_swap_lines="$(tmux show-option -gqv "@split-statusbar-swap-lines")"
   local toggle_flag="$1"
 
   if [[ "${toggle_flag}" = "reload" ]];then
