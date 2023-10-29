@@ -82,6 +82,11 @@ Here are all available options with their default values:
 ```bash
 @split-statusbar-mode 'on'           # [ on | off]
 
+@split-statusbar-swap-lines 'off'    # [ on | off ]
+                                     # Enable this option to swap rows,
+                                     # may be useful for those who prefer a status bar on top:
+                                     # set -g status-position top
+
 @split-statusbar-bindkey '-n F11'    # [ M-s | -n F11 | ... ]
                                      # bindkey for toggle statusbar-mode
                                      # define yourself just like bind-key, default: M-s

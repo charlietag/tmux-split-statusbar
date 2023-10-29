@@ -46,8 +46,13 @@ split_statusbar_on() {
   # status_format_0_tobe="$(echo "${status_format_0_default}" | sed 's/:status-left//g' | sed 's/:status-right//g')"
   status_format_0_tobe="$(echo "${status_format_0_default}" | sed 's/#{T;=\/#{status-left-length}:status-left}//g' | sed 's/#{T;=\/#{status-right-length}:status-right}//g')"
   status_format_1_tobe="$(echo "${status_format_0_default}" | sed 's/:window-status-current-format//g' | sed 's/:window-status-format//g')"
-  tmux set -g status-format[0] "${status_format_0_tobe}"
-  tmux set -g status-format[1] "${status_format_1_tobe}"
+  if [[ "${split_statusbar_swap_lines}" = "on" ]];then
+    tmux set -g status-format[0] "${status_format_1_tobe}"
+    tmux set -g status-format[1] "${status_format_0_tobe}"
+  else
+    tmux set -g status-format[0] "${status_format_0_tobe}"
+    tmux set -g status-format[1] "${status_format_1_tobe}"
+  fi
   tmux set -g status 2
 }
 
