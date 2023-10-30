@@ -151,4 +151,4 @@ set -g @split-status-hide-bindkey '-n F12'        # [ M-d | -n F12 | ... ]
     * xargs `-i` is deprecated, use `-I{}` instead
 * 2023/10/30
   * https://github.com/charlietag/tmux-split-statusbar/compare/v0.0.3...v0.1.0
-    * Add split-statusbar-swap-lines by @awerebea
+    * Add split-statusbar-swap-lines by [@awerebea](https://github.com/awerebea)
