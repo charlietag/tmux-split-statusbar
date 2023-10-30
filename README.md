@@ -108,6 +108,8 @@ Sample config in ~/.tmux.conf
 set -g @plugin 'charlietag/tmux-split-statusbar'
 set -g @split-statusbar-mode 'on'                 # [ on | off]
 
+set -g @split-statusbar-swap-lines 'off'          # [ on | off]
+
 set -g @split-statusbar-bindkey '-n F11'          # [ M-s | -n F11 | ... ]
                                                   # bindkey for toggle statusbar-mode
                                                   # define yourself just like bind-key, default: M-s
@@ -147,3 +149,6 @@ set -g @split-status-hide-bindkey '-n F12'        # [ M-d | -n F12 | ... ]
 * 2023/01/13
   * https://github.com/charlietag/tmux-split-statusbar/compare/v0.0.2...v0.0.3
     * xargs `-i` is deprecated, use `-I{}` instead
+* 2023/10/30
+  * https://github.com/charlietag/tmux-split-statusbar/compare/v0.0.3...v0.1.0
+    * Add split-statusbar-swap-lines by @awerebea
